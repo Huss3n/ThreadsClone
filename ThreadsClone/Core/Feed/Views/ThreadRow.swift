@@ -11,12 +11,7 @@ struct ThreadRow: View {
     var body: some View {
         VStack {
             HStack(alignment: .top, spacing: 12) {
-                Image(systemName: "person.fill")
-                    .frame(width: 40, height: 40)
-                    .overlay {
-                        Circle()
-                            .stroke(Color.black, lineWidth: 1.0)
-                    }
+             ProfileImageView()
                 
                 VStack(alignment: .leading) {
                     Text("Hussein Aisak")
