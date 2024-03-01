@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D73F8C582B91DBA7004C816C /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F8C572B91DBA7004C816C /* RegistrationView.swift */; };
+		D73F8C5B2B91DDD6004C816C /* ThreadsFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F8C5A2B91DDD6004C816C /* ThreadsFieldModifier.swift */; };
+		D73F8C5D2B91DEE8004C816C /* AuthButtonModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F8C5C2B91DEE8004C816C /* AuthButtonModifiers.swift */; };
 		D7B58B832B90B83500AD7E18 /* ThreadsCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B58B822B90B83500AD7E18 /* ThreadsCloneApp.swift */; };
 		D7B58B852B90B83500AD7E18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B58B842B90B83500AD7E18 /* ContentView.swift */; };
 		D7B58B872B90B83800AD7E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7B58B862B90B83800AD7E18 /* Assets.xcassets */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D73F8C572B91DBA7004C816C /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		D73F8C5A2B91DDD6004C816C /* ThreadsFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsFieldModifier.swift; sourceTree = "<group>"; };
+		D73F8C5C2B91DEE8004C816C /* AuthButtonModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButtonModifiers.swift; sourceTree = "<group>"; };
 		D7B58B7F2B90B83500AD7E18 /* ThreadsClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreadsClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B58B822B90B83500AD7E18 /* ThreadsCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsCloneApp.swift; sourceTree = "<group>"; };
 		D7B58B842B90B83500AD7E18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +40,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D73F8C592B91DDB7004C816C /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				D73F8C5A2B91DDD6004C816C /* ThreadsFieldModifier.swift */,
+				D73F8C5C2B91DEE8004C816C /* AuthButtonModifiers.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
 		D7B58B762B90B83500AD7E18 = {
 			isa = PBXGroup;
 			children = (
@@ -59,7 +74,6 @@
 				D7B58B932B90B87F00AD7E18 /* Models */,
 				D7B58B942B90B88500AD7E18 /* Services */,
 				D7B58B952B90B88B00AD7E18 /* utilities */,
-				D7B58B822B90B83500AD7E18 /* ThreadsCloneApp.swift */,
 				D7B58B862B90B83800AD7E18 /* Assets.xcassets */,
 				D7B58B882B90B83800AD7E18 /* Preview Content */,
 			);
@@ -77,6 +91,7 @@
 		D7B58B902B90B86900AD7E18 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D7B58B822B90B83500AD7E18 /* ThreadsCloneApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -114,6 +129,7 @@
 		D7B58B952B90B88B00AD7E18 /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D73F8C592B91DDB7004C816C /* ViewModifiers */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
@@ -138,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				D7B58B992B90B8F500AD7E18 /* LoginView.swift */,
+				D73F8C572B91DBA7004C816C /* RegistrationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,8 +230,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7B58B9A2B90B8F500AD7E18 /* LoginView.swift in Sources */,
+				D73F8C5B2B91DDD6004C816C /* ThreadsFieldModifier.swift in Sources */,
 				D7B58B852B90B83500AD7E18 /* ContentView.swift in Sources */,
 				D7B58B832B90B83500AD7E18 /* ThreadsCloneApp.swift in Sources */,
+				D73F8C5D2B91DEE8004C816C /* AuthButtonModifiers.swift in Sources */,
+				D73F8C582B91DBA7004C816C /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
