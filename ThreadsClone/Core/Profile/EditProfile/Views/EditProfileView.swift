@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct EditProfileView: View {
+    @State private var bio: String = ""
+    @State private var link: String = ""
+    @State private var isPrivateProfile: Bool = false
+    
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(.gray.opacity(0.3))
+                Color(.white.opacity(0.3))
                     .ignoresSafeArea(edges: [.bottom, .horizontal])
                 
                 VStack {
@@ -29,7 +33,38 @@ struct EditProfileView: View {
                         ProfileImageView()
                     }
                     
+                    Divider()
+                    
+                    // bio
+                    VStack(alignment: .leading) {
+                        Text("Bio")
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                        
+                        TextField("Enter your bio", text: $bio)
+                        
+                    }
+                    .font(.footnote)
+                    
+                    Divider()
+                    
+                    // link
+                    VStack(alignment: .leading) {
+                        Text("Link")
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                        
+                        TextField("Add Link", text: $link)
+                        
+                    }
+                    .font(.footnote)
+                    
+                    Divider()
+                    
+                    Toggle("Private Profile", isOn: $isPrivateProfile)
+                    
                 }
+                .padding()
                 .navigationTitle("Edit Profile")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
@@ -51,6 +86,12 @@ struct EditProfileView: View {
                         .fontWeight(.semibold)
                     }
                 }
+                .background(Color(.systemGray5))
+                .overlay {
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color(.systemGray4), lineWidth: 1.0)
+                }
+                .padding()
             }
         }
     }
