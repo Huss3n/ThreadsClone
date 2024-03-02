@@ -95,6 +95,7 @@ struct ProfileViews: View {
                 }
                 .padding(.vertical, 8)
             }
+           
         }
     }
 }
