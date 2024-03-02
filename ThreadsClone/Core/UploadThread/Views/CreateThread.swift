@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CreateThread: View {
     @State private var thread: String = ""
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationStack {
             VStack{
@@ -44,7 +45,7 @@ struct CreateThread: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Cancel") {
-                        //
+                        dismiss()
                     }
                     .font(.subheadline)
                     .foregroundStyle(.black)
