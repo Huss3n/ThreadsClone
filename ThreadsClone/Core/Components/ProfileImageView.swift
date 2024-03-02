@@ -9,11 +9,12 @@ import SwiftUI
 
 struct ProfileImageView: View {
     var body: some View {
-        Image(systemName: "person")
-//            .resizable()
+        Image("profile")
+            .resizable()
 //            .scaledToFill()
             .scaledToFit()
-            .frame(width: 40, height: 40)
+            .frame(width: 60, height: 60)
+            .clipShape(Circle())
             .overlay {
                 Circle()
                     .stroke(Color.black, lineWidth: 1.0)
