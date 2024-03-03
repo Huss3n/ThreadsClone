@@ -13,7 +13,7 @@ struct ThreadsFieldModifier: ViewModifier {
         content
             .font(.subheadline)
             .padding(12)
-            .background(Color(.systemGray6))
+            .background(Color(.systemGray5))
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .padding(.horizontal, 24)
     }
