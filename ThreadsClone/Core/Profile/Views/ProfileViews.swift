@@ -99,7 +99,7 @@ struct ProfileViews: View {
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         NavigationLink {
-                            Text("Settings view")
+                            SettingsView()
                         } label: {
                             Image(systemName: "line.3.horizontal")
                                 .foregroundStyle(.black)
