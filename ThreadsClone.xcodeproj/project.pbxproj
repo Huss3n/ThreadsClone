@@ -39,6 +39,7 @@
 		D7DB723F2B93C48A0029388E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D7DB723E2B93C48A0029388E /* FirebaseStorage */; };
 		D7DB72412B93C48B0029388E /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D7DB72402B93C48B0029388E /* FirebaseStorageCombine-Community */; };
 		D7DB72452B93C66F0029388E /* RootVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB72442B93C66E0029388E /* RootVM.swift */; };
+		D7DB72532B95C35E0029388E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB72522B95C35E0029388E /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		D7DB72242B93BF150029388E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D7DB722F2B93C4730029388E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D7DB72442B93C66E0029388E /* RootVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVM.swift; sourceTree = "<group>"; };
+		D7DB72522B95C35E0029388E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 				D73F8C692B91EDE7004C816C /* Explore */,
 				D73F8C612B91ED3E004C816C /* Feed */,
 				D73F8C722B91EE92004C816C /* Profile */,
+				D7DB724F2B95C33D0029388E /* Settings */,
 				D73F8C5E2B91E0D2004C816C /* TabBar */,
 				D7B58B972B90B8C600AD7E18 /* Root */,
 				D73F8C6D2B91EE3F004C816C /* UploadThread */,
@@ -384,6 +387,30 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		D7DB724F2B95C33D0029388E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D7DB72512B95C3510029388E /* Views */,
+				D7DB72502B95C34A0029388E /* ViewModel */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D7DB72502B95C34A0029388E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D7DB72512B95C3510029388E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D7DB72522B95C35E0029388E /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -469,6 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7DB72532B95C35E0029388E /* SettingsView.swift in Sources */,
 				D73F8C782B91F9DA004C816C /* ProfileViews.swift in Sources */,
 				D7DB72222B93B62D0029388E /* RegistrationVM.swift in Sources */,
 				D7DB72452B93C66F0029388E /* RootVM.swift in Sources */,
