@@ -41,6 +41,7 @@
 		D7DB72452B93C66F0029388E /* RootVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB72442B93C66E0029388E /* RootVM.swift */; };
 		D7DB72532B95C35E0029388E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB72522B95C35E0029388E /* SettingsView.swift */; };
 		D7DB72552B95C9720029388E /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB72542B95C9720029388E /* LoginVM.swift */; };
+		D7DB72572B990ACF0029388E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB72562B990ACF0029388E /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		D7DB72442B93C66E0029388E /* RootVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVM.swift; sourceTree = "<group>"; };
 		D7DB72522B95C35E0029388E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D7DB72542B95C9720029388E /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		D7DB72562B990ACF0029388E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 		D7B58B932B90B87F00AD7E18 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D7DB72562B990ACF0029388E /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				D7B58B832B90B83500AD7E18 /* ThreadsCloneApp.swift in Sources */,
 				D73F8C5D2B91DEE8004C816C /* AuthButtonModifiers.swift in Sources */,
 				D73F8C582B91DBA7004C816C /* RegistrationView.swift in Sources */,
+				D7DB72572B990ACF0029388E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
