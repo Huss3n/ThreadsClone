@@ -36,7 +36,7 @@ struct RegistrationView: View {
                 
                 TextField("Enter your username", text: $viewModel.username)
                     .modifier(ThreadsFieldModifier())
-                    .textInputAutocapitalization(.none)
+                    .textInputAutocapitalization(.never)
             }
         
             Button(action: {
