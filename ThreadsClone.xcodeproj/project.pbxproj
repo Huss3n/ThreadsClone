@@ -40,6 +40,7 @@
 		D7DB72412B93C48B0029388E /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D7DB72402B93C48B0029388E /* FirebaseStorageCombine-Community */; };
 		D7DB72452B93C66F0029388E /* RootVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB72442B93C66E0029388E /* RootVM.swift */; };
 		D7DB72532B95C35E0029388E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB72522B95C35E0029388E /* SettingsView.swift */; };
+		D7DB72552B95C9720029388E /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DB72542B95C9720029388E /* LoginVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		D7DB722F2B93C4730029388E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D7DB72442B93C66E0029388E /* RootVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVM.swift; sourceTree = "<group>"; };
 		D7DB72522B95C35E0029388E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D7DB72542B95C9720029388E /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +353,7 @@
 		D7DB72202B93B6180029388E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D7DB72542B95C9720029388E /* LoginVM.swift */,
 				D7DB72212B93B62D0029388E /* RegistrationVM.swift */,
 			);
 			path = ViewModel;
@@ -498,6 +501,7 @@
 			files = (
 				D7DB72532B95C35E0029388E /* SettingsView.swift in Sources */,
 				D73F8C782B91F9DA004C816C /* ProfileViews.swift in Sources */,
+				D7DB72552B95C9720029388E /* LoginVM.swift in Sources */,
 				D7DB72222B93B62D0029388E /* RegistrationVM.swift in Sources */,
 				D7DB72452B93C66F0029388E /* RootVM.swift in Sources */,
 				D7DB72122B939D290029388E /* EditProfileView.swift in Sources */,
