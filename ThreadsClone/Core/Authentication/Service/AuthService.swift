@@ -57,4 +57,9 @@ class AuthService {
             print("DEBUG: Error logging out user \(error.localizedDescription)")
         }
     }
+    
+    @MainActor
+    private func uploadUserData(id: String, withEmail email: String, username: String, fullName: String) async throws {
+        let user = User(id: id, fullName: fullName, email: email, username: username)
+    }
 }
