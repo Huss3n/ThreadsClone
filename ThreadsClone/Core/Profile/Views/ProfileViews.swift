@@ -18,6 +18,12 @@ struct ProfileViews: View {
         return UIScreen.main.bounds.width / count - 10
     }
     
+    // computed property for the current user
+    private var currentUser: User? {
+        return profileVM.currentUser
+    }
+    
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -27,15 +33,17 @@ struct ProfileViews: View {
                         HStack(alignment: .top) {
                             VStack(alignment: .leading, spacing: 12) {
                                 // fullname and username
-                                Text("Muktar Hussein")
+                                Text(currentUser?.fullName ?? "")
                                     .font(.title2)
                                     .fontWeight(.semibold)
                                 
-                                Text("hussein_aisak")
+                                Text(currentUser?.username ?? "")
                                     .font(.subheadline)
                                 
-                                Text("iOS Developer exploring the tech world")
-                                    .font(.caption)
+                                if let bio = currentUser?.bio {
+                                    Text(bio)
+                                        .font(.caption)
+                                }
                                 
                                 Text("10 followers")
                                     .font(.caption)

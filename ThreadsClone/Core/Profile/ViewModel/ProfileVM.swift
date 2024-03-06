@@ -11,6 +11,7 @@ import Combine
 
 class ProfileVM: ObservableObject {
     @Published var currentUser: User?
+    
     var cancellables = Set<AnyCancellable>()
     
     init() {
