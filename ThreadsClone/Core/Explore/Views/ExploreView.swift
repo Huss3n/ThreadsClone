@@ -23,11 +23,12 @@ struct ExploreView: View {
                             .padding(.vertical, 4)
                             Divider()
                         }
+                        .tint(.black)
                     }
                 }
             }
             .navigationDestination(for: User.self, destination: { user in
-                ProfileViews()
+                ProfileViews(user: user)
             })
             .navigationTitle("Search")
             .searchable(text: $searchText)

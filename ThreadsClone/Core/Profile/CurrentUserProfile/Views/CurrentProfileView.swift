@@ -1,15 +1,14 @@
 //
-//  ProfileViews.swift
+//  CurrentProfileView.swift
 //  ThreadsClone
 //
-//  Created by Muktar Hussein on 01/03/2024.
+//  Created by Muktar Hussein on 07/03/2024.
 //
 
 import SwiftUI
 
-struct ProfileViews: View {
-    // dependency injection
-    let user: User
+struct CurrentProfileView: View {
+    @StateObject private var profileVM = CurrentUserProfileVM()
     
     @State private var selectedFilter: ProfileThreadFilter = .threads
     @Namespace var animation
@@ -20,8 +19,13 @@ struct ProfileViews: View {
         return UIScreen.main.bounds.width / count - 10
     }
     
+    // computed property for the current user
+    private var currentUser: User? {
+        return profileVM.currentUser
+    }
+    
     var body: some View {
-        
+        NavigationStack {
             ScrollView {
                 VStack(spacing: 4) {
                     // bio and stats
@@ -29,14 +33,14 @@ struct ProfileViews: View {
                         HStack(alignment: .top) {
                             VStack(alignment: .leading, spacing: 12) {
                                 // fullname and username
-                                Text(user.fullName)
+                                Text(currentUser?.fullName ?? "")
                                     .font(.title2)
                                     .fontWeight(.semibold)
                                 
-                                Text(user.username)
+                                Text(currentUser?.username ?? "")
                                     .font(.subheadline)
                                 
-                                if let bio = user.bio {
+                                if let bio = currentUser?.bio {
                                     Text(bio)
                                         .font(.caption)
                                 }
@@ -113,12 +117,10 @@ struct ProfileViews: View {
                     }
                 }
             }
-        
+        }
     }
 }
 
-struct ProfileView_Preview: PreviewProvider {
-    static var previews: some View {
-        ProfileViews(user: dev.user)
-    }
+#Preview {
+    CurrentProfileView()
 }
