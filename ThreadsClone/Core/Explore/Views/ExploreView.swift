@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ExploreView: View {
+    @StateObject private var exploreVM = ExploreVM()
+    
     @State private var searchText: String = ""
     var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVStack {
-                    ForEach(0..<20){ _ in
+                    ForEach(exploreVM.users){ user in
                         VStack {
                             UserRow()
                         }
