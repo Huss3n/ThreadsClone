@@ -17,7 +17,7 @@ struct ExploreView: View {
                 LazyVStack {
                     ForEach(exploreVM.users){ user in
                         VStack {
-                            UserRow()
+                            UserRow(user: user)
                         }
                         .padding(.vertical, 4)
                         Divider()
