@@ -16,14 +16,19 @@ struct ExploreView: View {
             ScrollView {
                 LazyVStack {
                     ForEach(exploreVM.users){ user in
-                        VStack {
-                            UserRow(user: user)
+                        NavigationLink(value: user) {
+                            VStack {
+                                UserRow(user: user)
+                            }
+                            .padding(.vertical, 4)
+                            Divider()
                         }
-                        .padding(.vertical, 4)
-                        Divider()
                     }
                 }
             }
+            .navigationDestination(for: User.self, destination: { user in
+                ProfileViews()
+            })
             .navigationTitle("Search")
             .searchable(text: $searchText)
         }
