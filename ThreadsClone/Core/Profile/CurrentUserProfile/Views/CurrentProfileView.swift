@@ -30,36 +30,15 @@ struct CurrentProfileView: View {
                 VStack(spacing: 4) {
                     // bio and stats
                     VStack(spacing: 40) {
-                        HStack(alignment: .top) {
-                            VStack(alignment: .leading, spacing: 12) {
-                                // fullname and username
-                                Text(currentUser?.fullName ?? "")
-                                    .font(.title2)
-                                    .fontWeight(.semibold)
-                                
-                                Text(currentUser?.username ?? "")
-                                    .font(.subheadline)
-                                
-                                if let bio = currentUser?.bio {
-                                    Text(bio)
-                                        .font(.caption)
-                                }
-                                
-                                Text("10 followers")
-                                    .font(.caption)
-                                    .foregroundStyle(.gray)
-                            }
-                            
-                            Spacer()
-                            ProfileImageView()
-                            
-                        }
-                        .padding(.horizontal)
+                        
+                        ProfileHeaderView(user: currentUser)
                     }
                     
                     // edit and share buttons
                     HStack {
-                        Button(action: {}, label: {
+                        Button(action: {
+                            
+                        }, label: {
                             Text("Follow")
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
@@ -71,40 +50,7 @@ struct CurrentProfileView: View {
                     }
                     
                     // user content list view
-                    VStack {
-                        HStack {
-                            ForEach(ProfileThreadFilter.allCases){ filter in
-                                VStack {
-                                    Text(filter.title)
-                                        .font(.subheadline)
-                                        .fontWeight(selectedFilter == filter ? .semibold : .regular)
-                                    
-                                    if selectedFilter == filter {
-                                        Rectangle()
-                                            .foregroundStyle(.black)
-                                            .frame(width: tabBarWidth, height: 1)
-                                            .matchedGeometryEffect(id: "item", in: animation )
-                                    } else {
-                                        Rectangle()
-                                            .foregroundStyle(.clear)
-                                            .frame(width: tabBarWidth, height: 1)
-                                    }
-                                }
-                                .onTapGesture {
-                                    withAnimation(.spring) {
-                                        selectedFilter = filter
-                                    }
-                                }
-                            }
-                        }
-                        
-                        LazyVStack {
-                            ForEach(0..<20){ _ in
-                                ThreadRow()
-                            }
-                        }
-                    }
-                    .padding(.vertical, 8)
+                    UserContentListView()
                 }
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
