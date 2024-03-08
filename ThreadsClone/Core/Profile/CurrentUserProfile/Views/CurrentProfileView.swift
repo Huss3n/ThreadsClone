@@ -46,6 +46,10 @@ struct CurrentProfileView: View {
                                 .frame(width: 352, height: 32)
                                 .background(.white)
                                 .clipShape(RoundedRectangle(cornerRadius: 8))
+                                .overlay {
+                                    Capsule()
+                                        .stroke(Color.black, lineWidth: 1.0)
+                                }
                         })
                     }
                     
