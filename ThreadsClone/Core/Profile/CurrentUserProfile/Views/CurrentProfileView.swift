@@ -39,12 +39,12 @@ struct CurrentProfileView: View {
                         Button(action: {
                             
                         }, label: {
-                            Text("Follow")
+                            Text("Edit Profile")
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
-                                .foregroundStyle(.white)
+                                .foregroundStyle(.black)
                                 .frame(width: 352, height: 32)
-                                .background(.black)
+                                .background(.white)
                                 .clipShape(RoundedRectangle(cornerRadius: 8))
                         })
                     }

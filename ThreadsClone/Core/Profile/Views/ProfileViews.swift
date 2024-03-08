@@ -36,16 +36,7 @@ struct ProfileViews: View {
                 UserContentListView()
             
             }
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    NavigationLink {
-                        SettingsView()
-                    } label: {
-                        Image(systemName: "line.3.horizontal")
-                            .foregroundStyle(.black)
-                    }
-                }
-            }
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
