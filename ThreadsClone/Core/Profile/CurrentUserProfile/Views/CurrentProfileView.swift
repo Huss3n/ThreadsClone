@@ -43,7 +43,24 @@ struct CurrentProfileView: View {
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
                                 .foregroundStyle(.black)
-                                .frame(width: 352, height: 32)
+                                .frame(width: UIScreen.main.bounds.width / 2, height: 32)
+                                .background(.white)
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                                .overlay {
+                                    Capsule()
+                                        .stroke(Color.black, lineWidth: 1.0)
+                                }
+                        })
+                        
+                        
+                        Button(action: {
+                            
+                        }, label: {
+                            Text("Share Profile")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                                .foregroundStyle(.black)
+                                .frame(width: UIScreen.main.bounds.width / 2, height: 32)
                                 .background(.white)
                                 .clipShape(RoundedRectangle(cornerRadius: 8))
                                 .overlay {
@@ -52,6 +69,7 @@ struct CurrentProfileView: View {
                                 }
                         })
                     }
+                    .padding()
                     
                     // user content list view
                     UserContentListView()

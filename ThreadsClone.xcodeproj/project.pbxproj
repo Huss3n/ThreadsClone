@@ -189,7 +189,6 @@
 			children = (
 				D77935952B9A39B0000333AF /* Components */,
 				D7DBC0722B9A0A4C00BC2E5D /* CurrentUserProfile */,
-				D7DB725C2B9911430029388E /* ViewModel */,
 				D7DB720F2B939D0E0029388E /* EditProfile */,
 				D7DB720C2B9396D10029388E /* Model */,
 				D73F8C762B91F9CD004C816C /* Views */,
@@ -452,13 +451,6 @@
 				D7DB72522B95C35E0029388E /* SettingsView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		D7DB725C2B9911430029388E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D7DBC0722B9A0A4C00BC2E5D /* CurrentUserProfile */ = {
