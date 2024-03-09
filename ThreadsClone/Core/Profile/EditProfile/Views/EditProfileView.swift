@@ -33,7 +33,7 @@ struct EditProfileView: View {
                         Spacer()
 
                         PhotosPicker(selection: $viewmodel.selectedImage) {
-                            if let image = viewmodel.image {
+                            if let image = viewmodel.profileImage {
                                 image
                                     .resizable()
                                     .scaledToFill()
