@@ -6,16 +6,19 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct EditProfileView: View {
     @State private var bio: String = ""
     @State private var link: String = ""
     @State private var isPrivateProfile: Bool = false
+    @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var viewmodel: CurrentUserProfileVM
     
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(.white.opacity(0.3))
+                Color(.gray.opacity(0.15))
                     .ignoresSafeArea(edges: [.bottom, .horizontal])
                 
                 VStack {
@@ -28,9 +31,18 @@ struct EditProfileView: View {
                             Text("Hussein Aisak")
                         }
                         Spacer()
-                        
-                        
-                        ProfileImageView()
+
+                        PhotosPicker(selection: $viewmodel.selectedImage) {
+                            if let image = viewmodel.image {
+                                image
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 40, height: 40)
+                                    .clipShape(Circle())
+                            }else {
+                                ProfileImageView()
+                            }
+                        }
                     }
                     
                     Divider()
@@ -70,8 +82,8 @@ struct EditProfileView: View {
                 .toolbar {
                     ToolbarItem(placement: .topBarLeading) {
                         
-                        Button("cancel") {
-                            //
+                        Button("Cancel") {
+                            dismiss()
                         }
                         .font(.subheadline)
                         .foregroundStyle(.black)
@@ -92,6 +104,7 @@ struct EditProfileView: View {
                         .stroke(Color(.systemGray4), lineWidth: 1.0)
                 }
                 .padding()
+                
             }
         }
     }

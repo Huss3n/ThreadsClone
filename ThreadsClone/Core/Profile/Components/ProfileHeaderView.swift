@@ -36,6 +36,7 @@ struct ProfileHeaderView: View {
             
         }
         .padding(.horizontal)
+        .padding()
     }
 }
 

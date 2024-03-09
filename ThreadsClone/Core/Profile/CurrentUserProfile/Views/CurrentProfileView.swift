@@ -13,6 +13,8 @@ struct CurrentProfileView: View {
     @State private var selectedFilter: ProfileThreadFilter = .threads
     @Namespace var animation
     
+    @State private var showEditProfile: Bool = false
+    
     
     private var tabBarWidth: CGFloat {
         let count = CGFloat(ProfileThreadFilter.allCases.count)
@@ -30,50 +32,37 @@ struct CurrentProfileView: View {
                 VStack(spacing: 4) {
                     // bio and stats
                     VStack(spacing: 40) {
-                        
                         ProfileHeaderView(user: currentUser)
                     }
                     
                     // edit and share buttons
                     HStack {
                         Button(action: {
-                            
+                            showEditProfile.toggle()
                         }, label: {
                             Text("Edit Profile")
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
                                 .foregroundStyle(.black)
-                                .frame(width: UIScreen.main.bounds.width / 2, height: 32)
+                                .frame(width: 352, height: 32)
                                 .background(.white)
                                 .clipShape(RoundedRectangle(cornerRadius: 8))
                                 .overlay {
                                     Capsule()
-                                        .stroke(Color.black, lineWidth: 1.0)
+                                        .stroke(Color.black, lineWidth: 0.5)
                                 }
                         })
-                        
-                        
-                        Button(action: {
-                            
-                        }, label: {
-                            Text("Share Profile")
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
-                                .foregroundStyle(.black)
-                                .frame(width: UIScreen.main.bounds.width / 2, height: 32)
-                                .background(.white)
-                                .clipShape(RoundedRectangle(cornerRadius: 8))
-                                .overlay {
-                                    Capsule()
-                                        .stroke(Color.black, lineWidth: 1.0)
-                                }
-                        })
+
                     }
-                    .padding()
                     
                     // user content list view
                     UserContentListView()
                 }
+                .sheet(isPresented: $showEditProfile, content: {
+                    EditProfileView()
+                        .environmentObject(profileVM)
+                })
+                .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         NavigationLink {
@@ -85,6 +74,7 @@ struct CurrentProfileView: View {
                     }
                 }
             }
+            .scrollIndicators(.hidden)
         }
     }
 }

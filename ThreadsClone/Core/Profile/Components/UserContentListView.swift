@@ -53,6 +53,7 @@ struct UserContentListView: View {
             }
         }
         .padding(.vertical, 8)
+        .padding()
     }
 }
 
