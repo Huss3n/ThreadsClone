@@ -60,7 +60,6 @@ struct CurrentProfileView: View {
                 }
                 .sheet(isPresented: $showEditProfile, content: {
                     EditProfileView()
-                        .environmentObject(profileVM)
                 })
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {

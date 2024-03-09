@@ -9,11 +9,13 @@ import SwiftUI
 import PhotosUI
 
 struct EditProfileView: View {
+    @StateObject private var EditVM = EditProfileVM()
+    
     @State private var bio: String = ""
     @State private var link: String = ""
     @State private var isPrivateProfile: Bool = false
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var viewmodel: CurrentUserProfileVM
+    
     
     var body: some View {
         NavigationStack {
@@ -32,8 +34,8 @@ struct EditProfileView: View {
                         }
                         Spacer()
 
-                        PhotosPicker(selection: $viewmodel.selectedImage) {
-                            if let image = viewmodel.profileImage {
+                        PhotosPicker(selection: $EditVM.selectedImage) {
+                            if let image = EditVM.profileImage {
                                 image
                                     .resizable()
                                     .scaledToFill()
