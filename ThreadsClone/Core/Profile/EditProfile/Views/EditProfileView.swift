@@ -9,7 +9,7 @@ import SwiftUI
 import PhotosUI
 
 struct EditProfileView: View {
-    @StateObject private var EditVM = EditProfileVM()
+    @StateObject private var editVM = EditProfileVM()
     
     @State private var bio: String = ""
     @State private var link: String = ""
@@ -34,8 +34,8 @@ struct EditProfileView: View {
                         }
                         Spacer()
 
-                        PhotosPicker(selection: $EditVM.selectedImage) {
-                            if let image = EditVM.profileImage {
+                        PhotosPicker(selection: $editVM.selectedImage) {
+                            if let image = editVM.profileImage {
                                 image
                                     .resizable()
                                     .scaledToFill()
@@ -93,7 +93,8 @@ struct EditProfileView: View {
                     
                     ToolbarItem(placement: .topBarTrailing) {
                         Button("Done") {
-                            //
+                            Task { try await editVM.updateUserDate() }
+                            dismiss()
                         }
                         .font(.subheadline)
                         .foregroundStyle(.black)

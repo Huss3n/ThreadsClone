@@ -19,6 +19,11 @@ class EditProfileVM: ObservableObject {
     }
     @Published var profileImage: Image?
     
+    
+    func updateUserDate() async throws {
+        print("DEBUG: update user data")
+    }
+    
     @MainActor
     private func loadImage() async {
         guard let item = selectedImage else { return }
