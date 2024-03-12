@@ -59,7 +59,9 @@ struct CurrentProfileView: View {
                     UserContentListView()
                 }
                 .sheet(isPresented: $showEditProfile, content: {
-                    EditProfileView()
+                    if let user = currentUser {
+                        EditProfileView(user: user)
+                    }
                 })
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {

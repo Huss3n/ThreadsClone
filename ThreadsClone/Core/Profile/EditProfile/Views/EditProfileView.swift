@@ -16,6 +16,8 @@ struct EditProfileView: View {
     @State private var isPrivateProfile: Bool = false
     @Environment(\.dismiss) var dismiss
     
+    let user: User
+    
     
     var body: some View {
         NavigationStack {
@@ -30,7 +32,7 @@ struct EditProfileView: View {
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
                             
-                            Text("Hussein Aisak")
+                            Text(user.fullName)
                         }
                         Spacer()
 
@@ -113,6 +115,8 @@ struct EditProfileView: View {
     }
 }
 
-#Preview {
-    EditProfileView()
+struct EditProfileView_Preview: PreviewProvider {
+    static var previews: some View {
+        EditProfileView(user: dev.user)
+    }
 }

@@ -39,6 +39,19 @@ class UserService {
     }
     
     func reset() {
-        self.currentUser = nil
+        self.currentUser  = nil
+    }
+    
+    @MainActor
+    func updateImageURl(withImageURL imageURL: String) async throws {
+        // get current user
+        guard let currentUID = Auth.auth().currentUser?.uid else { return }
+        
+        // fetch the data based on this user uid
+        try await Firestore.firestore().collection("users").document(currentUID).updateData([
+            "profileImageURL": imageURL
+        ])
+        // update the url locally too
+        self.currentUser?.profileImageURL = imageURL
     }
 }

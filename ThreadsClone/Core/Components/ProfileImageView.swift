@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct ProfileImageView: View {
+    var user: User?
+    
     var body: some View {
-        Image("profile")
-            .resizable()
-//            .scaledToFill()
-            .scaledToFit()
-            .frame(width: 40, height: 40)
-            .clipShape(Circle())
-            .overlay {
-                Circle()
-                    .stroke(Color.black, lineWidth: 1.0)
-            }
+        if let image = user?.profileImageURL {
+            
+        }else {
+            Image(systemName: "person.circle.fill")
+                .resizable()
+                .frame(width: 40, height: 40)
+                .foregroundStyle(Color(.systemGray4))
+        }
     }
 }
 

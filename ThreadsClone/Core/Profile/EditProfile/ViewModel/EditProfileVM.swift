@@ -17,11 +17,12 @@ class EditProfileVM: ObservableObject {
             Task { await loadImage() }
         }
     }
-    @Published var profileImage: Image?
     
+    @Published var profileImage: Image?
+    @Published var uiImage: UIImage?
     
     func updateUserDate() async throws {
-        print("DEBUG: update user data")
+        try await uploadImage()
     }
     
     @MainActor
@@ -29,7 +30,17 @@ class EditProfileVM: ObservableObject {
         guard let item = selectedImage else { return }
         guard let data = try? await item.loadTransferable(type: Data.self) else { return }
         guard let uiImage = UIImage(data: data) else { return }
+        self.uiImage = uiImage
         self.profileImage = Image(uiImage: uiImage)
     }
     
+    
+    private func uploadImage() async throws {
+        guard let image = self.uiImage else { return }
+        // call the upload image function and get the uploaded image url
+        guard let imageURL = try? await UploadImage.uploadImage(image) else { return }
+        
+        // upload the image url to firebase
+        try await UserService.shared.updateImageURl(withImageURL: imageURL)
+    }
 }
