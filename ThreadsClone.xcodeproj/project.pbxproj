@@ -22,6 +22,8 @@
 		D76668FF2BA08B9A008E93E7 /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76668FE2BA08B9A008E93E7 /* UploadImage.swift */; };
 		D76669022BA0A10D008E93E7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D76669012BA0A10D008E93E7 /* Kingfisher */; };
 		D76669042BA1A408008E93E7 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76669032BA1A408008E93E7 /* Thread.swift */; };
+		D76669072BA1A8C9008E93E7 /* CreateThreadVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76669062BA1A8C9008E93E7 /* CreateThreadVM.swift */; };
+		D76669092BA1A8F1008E93E7 /* ThreadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76669082BA1A8F1008E93E7 /* ThreadService.swift */; };
 		D777A0F62B99CBB7002CCE5A /* ExploreVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D777A0F52B99CBB7002CCE5A /* ExploreVM.swift */; };
 		D777A0F82B99CFE4002CCE5A /* DeveloperPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D777A0F72B99CFE4002CCE5A /* DeveloperPreview.swift */; };
 		D77935972B9A39C2000333AF /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77935962B9A39C2000333AF /* ProfileHeaderView.swift */; };
@@ -70,6 +72,8 @@
 		D73F8C7E2B92065A004C816C /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
 		D76668FE2BA08B9A008E93E7 /* UploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
 		D76669032BA1A408008E93E7 /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
+		D76669062BA1A8C9008E93E7 /* CreateThreadVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadVM.swift; sourceTree = "<group>"; };
+		D76669082BA1A8F1008E93E7 /* ThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadService.swift; sourceTree = "<group>"; };
 		D777A0F52B99CBB7002CCE5A /* ExploreVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreVM.swift; sourceTree = "<group>"; };
 		D777A0F72B99CFE4002CCE5A /* DeveloperPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperPreview.swift; sourceTree = "<group>"; };
 		D77935962B9A39C2000333AF /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 		D73F8C6D2B91EE3F004C816C /* UploadThread */ = {
 			isa = PBXGroup;
 			children = (
+				D76669052BA1A8A9008E93E7 /* ViewModel */,
 				D73F8C6E2B91EE4B004C816C /* Views */,
 			);
 			path = UploadThread;
@@ -227,6 +232,14 @@
 				D73F8C7E2B92065A004C816C /* UserRow.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D76669052BA1A8A9008E93E7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D76669062BA1A8C9008E93E7 /* CreateThreadVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D777A0F42B99CBA9002CCE5A /* ViewModel */ = {
@@ -343,6 +356,7 @@
 			children = (
 				D7DB725A2B9910350029388E /* UserService.swift */,
 				D76668FE2BA08B9A008E93E7 /* UploadImage.swift */,
+				D76669082BA1A8F1008E93E7 /* ThreadService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -593,6 +607,7 @@
 				D73F8C752B91F9AD004C816C /* ActivityView.swift in Sources */,
 				D73F8C662B91ED6A004C816C /* FeedView.swift in Sources */,
 				D7DB720E2B9396E20029388E /* ProfileThreadFilter.swift in Sources */,
+				D76669092BA1A8F1008E93E7 /* ThreadService.swift in Sources */,
 				D7DB72252B93BF150029388E /* AuthService.swift in Sources */,
 				D7DB725E2B99114E0029388E /* CurrentUserProfileVM.swift in Sources */,
 				D73F8C7F2B92065A004C816C /* UserRow.swift in Sources */,
@@ -616,6 +631,7 @@
 				D73F8C582B91DBA7004C816C /* RegistrationView.swift in Sources */,
 				D77935992B9A3EC6000333AF /* UserContentListView.swift in Sources */,
 				D7DBC0762B9A0A7600BC2E5D /* CurrentProfileView.swift in Sources */,
+				D76669072BA1A8C9008E93E7 /* CreateThreadVM.swift in Sources */,
 				D7DB72572B990ACF0029388E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
