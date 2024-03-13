@@ -8,28 +8,33 @@
 import SwiftUI
 
 struct CreateThread: View {
-    @State private var thread: String = ""
+    @StateObject private var createVM = CreateThreadVM()
+
     @Environment(\.dismiss) var dismiss
+    
+    private var user: User? {
+        return UserService.shared.currentUser
+    }
     var body: some View {
         NavigationStack {
             VStack{
                 
                 HStack(alignment: .top) {
-                    ProfileImageView(user: nil)
+                    ProfileImageView(user: user)
                     
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Hussein Aisak")
+                        Text(user?.fullName ?? "No name")
                             .fontWeight(.semibold)
                         
-                        TextField("Start a thread", text: $thread)
+                        TextField("Start a thread", text: $createVM.caption)
                     }
                     .font(.footnote)
                     
                     Spacer()
                     
-                    if !thread.isEmpty {
+                    if !createVM.caption.isEmpty {
                         Button(action: {
-                            thread = ""
+                            createVM.caption = ""
                         }, label: {
                             Image(systemName: "xmark")
                                 .resizable()
@@ -53,13 +58,16 @@ struct CreateThread: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Post") {
-                        //
+                        Task {
+                            try await createVM.uploadThread()
+                            dismiss()
+                        }
                     }
                     .font(.subheadline)
                     .foregroundStyle(.black)
                     .fontWeight(.semibold)
-                    .opacity(thread.isEmpty ? 0.5 : 1.0)
-                    .disabled(thread.isEmpty)
+                    .opacity(createVM.caption.isEmpty ? 0.5 : 1.0)
+                    .disabled(createVM.caption.isEmpty)
                 }
             }
             .navigationTitle("New Thread")
