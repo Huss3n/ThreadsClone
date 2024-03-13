@@ -24,6 +24,7 @@
 		D76669042BA1A408008E93E7 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76669032BA1A408008E93E7 /* Thread.swift */; };
 		D76669072BA1A8C9008E93E7 /* CreateThreadVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76669062BA1A8C9008E93E7 /* CreateThreadVM.swift */; };
 		D76669092BA1A8F1008E93E7 /* ThreadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76669082BA1A8F1008E93E7 /* ThreadService.swift */; };
+		D766690D2BA1C2A6008E93E7 /* FeedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766690C2BA1C2A6008E93E7 /* FeedVM.swift */; };
 		D777A0F62B99CBB7002CCE5A /* ExploreVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D777A0F52B99CBB7002CCE5A /* ExploreVM.swift */; };
 		D777A0F82B99CFE4002CCE5A /* DeveloperPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D777A0F72B99CFE4002CCE5A /* DeveloperPreview.swift */; };
 		D77935972B9A39C2000333AF /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77935962B9A39C2000333AF /* ProfileHeaderView.swift */; };
@@ -74,6 +75,7 @@
 		D76669032BA1A408008E93E7 /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		D76669062BA1A8C9008E93E7 /* CreateThreadVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadVM.swift; sourceTree = "<group>"; };
 		D76669082BA1A8F1008E93E7 /* ThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadService.swift; sourceTree = "<group>"; };
+		D766690C2BA1C2A6008E93E7 /* FeedVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVM.swift; sourceTree = "<group>"; };
 		D777A0F52B99CBB7002CCE5A /* ExploreVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreVM.swift; sourceTree = "<group>"; };
 		D777A0F72B99CFE4002CCE5A /* DeveloperPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperPreview.swift; sourceTree = "<group>"; };
 		D77935962B9A39C2000333AF /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		D73F8C612B91ED3E004C816C /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				D766690B2BA1C29C008E93E7 /* ViewModel */,
 				D73F8C622B91ED43004C816C /* Views */,
 			);
 			path = Feed;
@@ -192,6 +195,7 @@
 		D73F8C712B91EE8D004C816C /* Activity */ = {
 			isa = PBXGroup;
 			children = (
+				D766690A2BA1B74B008E93E7 /* ViewModel */,
 				D73F8C732B91F9A0004C816C /* Views */,
 			);
 			path = Activity;
@@ -238,6 +242,21 @@
 			isa = PBXGroup;
 			children = (
 				D76669062BA1A8C9008E93E7 /* CreateThreadVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D766690A2BA1B74B008E93E7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D766690B2BA1C29C008E93E7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D766690C2BA1C2A6008E93E7 /* FeedVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -616,6 +635,7 @@
 				D73F8C6C2B91EE0F004C816C /* ExploreView.swift in Sources */,
 				D7B58B9A2B90B8F500AD7E18 /* LoginView.swift in Sources */,
 				D779359C2B9CE7AC000333AF /* EditProfileVM.swift in Sources */,
+				D766690D2BA1C2A6008E93E7 /* FeedVM.swift in Sources */,
 				D77935972B9A39C2000333AF /* ProfileHeaderView.swift in Sources */,
 				D73F8C602B91EAC3004C816C /* ThreadsTabView.swift in Sources */,
 				D73F8C7A2B91FC38004C816C /* ThreadRow.swift in Sources */,

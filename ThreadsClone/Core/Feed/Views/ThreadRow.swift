@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct ThreadRow: View {
+    let thread: Thread
+    
     var body: some View {
         VStack {
             HStack(alignment: .top, spacing: 12) {
-                ProfileImageView(user: nil)
+                ProfileImageView(user: thread.user)
                 
                 VStack(alignment: .leading) {
-                    Text("Hussein Aisak")
+                    Text(thread.user?.username ?? "No name")
                         .fontWeight(.semibold)
                     
-                    Text("Happy coding. Loving SwiftUI")
+                    Text(thread.caption)
                         .font(.footnote)
                     
                     HStack(spacing: 12) {
@@ -69,6 +71,8 @@ struct ThreadRow: View {
     }
 }
 
-#Preview {
-    ThreadRow()
+struct ThreadRow_Preview: PreviewProvider {
+    static var previews: some View {
+        ThreadRow(thread: dev.thread)
+    }
 }

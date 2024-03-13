@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct FeedView: View {
+    @StateObject private var feedVM = FeedVM()
+
+    
     var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVStack {
-                    ForEach(0..<10) { _ in
-                        ThreadRow()
+                    ForEach(feedVM.threads) { thread in
+                        ThreadRow(thread: thread)
                     }
                 }
                 .scrollIndicators(.hidden)
