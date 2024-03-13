@@ -11,7 +11,7 @@ struct ThreadRow: View {
     var body: some View {
         VStack {
             HStack(alignment: .top, spacing: 12) {
-             ProfileImageView()
+                ProfileImageView(user: nil)
                 
                 VStack(alignment: .leading) {
                     Text("Hussein Aisak")

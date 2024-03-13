@@ -32,7 +32,7 @@ struct ProfileHeaderView: View {
             }
             
             Spacer()
-            ProfileImageView()
+            ProfileImageView(user: user)
             
         }
         .padding(.horizontal)

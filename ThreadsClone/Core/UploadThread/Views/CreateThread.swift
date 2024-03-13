@@ -15,7 +15,7 @@ struct CreateThread: View {
             VStack{
                 
                 HStack(alignment: .top) {
-                    ProfileImageView()
+                    ProfileImageView(user: nil)
                     
                     VStack(alignment: .leading, spacing: 4) {
                         Text("Hussein Aisak")

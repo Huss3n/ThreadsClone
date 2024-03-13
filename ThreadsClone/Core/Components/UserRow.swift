@@ -12,7 +12,7 @@ struct UserRow: View {
     
     var body: some View {
         HStack {
-         ProfileImageView()
+            ProfileImageView(user: user)
             
             VStack(alignment: .leading, spacing: 2) {
                 Text(user.username)
