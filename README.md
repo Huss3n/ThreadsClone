@@ -2,13 +2,23 @@
 This project aims to replicate the core functionalities of a popular social networking app like Threads, emphasizing user authentication, thread creation, real-time updates, and a user-friendly interface built with SwiftUI.
 It leverages Firebase's robust backend services for seamless data management and real-time interactions.
 
-## Key Features:
+## Features:
+- User Authentication: Users can sign up for new accounts or log in with existing credentials using secure Firebase Authentication.
+- Thread Creation: Users can create threads with titles and optional images to spark discussions on various topics.
+- Feed View: Browse a scrollable feed displaying all created threads in real-time.
+- Search View: Search for specific threads by title for easy navigation.
+- Activity View: View user activity, including threads created and interactions.
+- Settings View: Manage user profile and account settings.
+- Session Management: Combine publishers and subscribers ensure seamless user session handling throughout the app.
 
-- User Authentication: Securely register and log in users using Firebase Authentication for a seamless login experience.
-- Thread Creation: Allow users to create new threads, including text content and optional media attachments, fostering a platform for discussions.
-- Real-time Updates: Employ Firebase Cloud Firestore to deliver real-time updates whenever new threads are created or changes occur, keeping users engaged and informed.
-- User Profiles: Provide basic user profiles displaying basic information and potentially showcasing past activities or created threads (future implementation).
-- Modern Interface: Utilize SwiftUI to create a visually appealing and intuitive user interface, leveraging declarative syntax for effortless development.
+  ## Screenshots
+  <p>
+   <img src="https://github.com/Huss3n/ThreadsClone/blob/main/screenshots/feed.png", width="200"/>
+   <img src="https://github.com/Huss3n/ThreadsClone/blob/main/screenshots/search.png", width="200"/>
+   <img src="https://github.com/Huss3n/ThreadsClone/blob/main/screenshots/newThread.png", width="200"/>
+   <img src="https://github.com/Huss3n/ThreadsClone/blob/main/screenshots/activity.png", width="200"/>
+   <img src="https://github.com/Huss3n/ThreadsClone/blob/main/screenshots/profile.png", width="200"/>
+</p>
 
 ## Prerequisites:
 
