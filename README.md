@@ -13,11 +13,11 @@ It leverages Firebase's robust backend services for seamless data management and
 
   ## Screenshots
   <p>
-   <img src="https://github.com/Huss3n/ThreadsClone/blob/main/screenshots/feed.png", width="200"/>
-   <img src="https://github.com/Huss3n/ThreadsClone/blob/main/screenshots/search.png", width="200"/>
-   <img src="https://github.com/Huss3n/ThreadsClone/blob/main/screenshots/newThread.png", width="200"/>
-   <img src="https://github.com/Huss3n/ThreadsClone/blob/main/screenshots/activity.png", width="200"/>
-   <img src="https://github.com/Huss3n/ThreadsClone/blob/main/screenshots/profile.png", width="200"/>
+   <img src="https://github.com/Huss3n/ThreadsClone/blob/main/screenshots/feed.png", width="190" hspace="1"/>
+   <img src="https://github.com/Huss3n/ThreadsClone/blob/main/screenshots/search.png", width="190" hspace="1"/>
+   <img src="https://github.com/Huss3n/ThreadsClone/blob/main/screenshots/newThread.png", width="190" hspace="1"/>
+   <img src="https://github.com/Huss3n/ThreadsClone/blob/main/screenshots/activity.png", width="190" hspace="1"/>
+   <img src="https://github.com/Huss3n/ThreadsClone/blob/main/screenshots/profile.png", width="190"/>
 </p>
 
 ## Prerequisites:
