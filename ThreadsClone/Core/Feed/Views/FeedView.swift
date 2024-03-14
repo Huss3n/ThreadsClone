@@ -22,18 +22,10 @@ struct FeedView: View {
                 .scrollIndicators(.hidden)
             }
             .refreshable {
-                print("Refresh threads")
+                Task { try await feedVM.fetchThreads() }
             }
             .navigationTitle("Threads")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {}, label: {
-                        Image(systemName: "arrow.counterclockwise")
-                            .foregroundStyle(.black)
-                    })
-                }
-            }
         }
     }
 }
