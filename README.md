@@ -23,7 +23,7 @@ It leverages Firebase's robust backend services for seamless data management and
 ## Prerequisites:
 
 ### Development Environment:
-- Xcode (latest version recommended)
+- Xcode (latest version recommended) newest is better
 - Swift and SwiftUI support in Xcode
 - Basic familiarity with Swift, SwiftUI, and Git for version control
 - Firebase Project:
